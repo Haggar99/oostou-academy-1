@@ -4,12 +4,12 @@ import bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 
+// importation des routes
+
+const clientRouter = require('./routes/client.routes');
+
 
 const app = express();
-
-const enseignantRouter = require('./routes/enseignant.routes');
-const adminRouter = require('./routes/admin.routes');
-
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
@@ -34,6 +34,8 @@ app.use(
 
 );
 
+
+app.use('/api/client', clientRouter);
 
 export default app;
 

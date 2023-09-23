@@ -44,9 +44,9 @@ server.on('listening', onListening);
 server.on('error', onError);
 
 mongoose
-  .connect("mongodb://localhost:27017/ecole")
+  .connect("mongodb://localhost:27017/shop")
   .then(() => {
-    console.log('Connected to database ' + process.env.MONGO_URI);
+    console.log('Connected to database mongodb://localhost:27017/shop');
     server.listen(port);
   })
   .catch((err) => {
