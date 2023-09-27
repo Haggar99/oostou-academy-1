@@ -3,12 +3,8 @@ import {Request, Response} from 'express';
 import Configuration from 'openai';
 import OpenAIApi from 'openai';
 
-// const openai = new OpenAIApi(new Configuration({
-//     apiKey: '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'
-// }))
 
 const openai = new OpenAIApi({
-    apiKey: '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'
 })
 export const runResponseChatGpt = async (req: Request, res: Response) => {
     const question = req.body.question;
