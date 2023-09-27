@@ -2,7 +2,7 @@ import Produit, { ProduitDoc } from '../models/produit.model';
 import {Request, Response} from 'express';
 import Configuration from 'openai';
 import OpenAIApi from 'openai';
-
+    
 
 const openai = new OpenAIApi({
 })
