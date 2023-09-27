@@ -7,7 +7,8 @@ const morgan = require('morgan');
 // importation des routes
 
 const clientRouter = require('./routes/client.routes');
-
+const fournisseurRouter = require('./routes/fournisseur.routes');
+const productRouter = require('./routes/produit.routes')
 
 const app = express();
 
@@ -34,8 +35,9 @@ app.use(
 
 );
 
-
+app.use('/api/fournisseur', fournisseurRouter);
 app.use('/api/client', clientRouter);
+app.use('/api/product', productRouter)
 
 export default app;
 

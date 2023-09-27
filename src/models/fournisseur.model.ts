@@ -7,7 +7,7 @@ export interface IFournisseur {
     phone: string;
     age: string;
     email: string;
-    password: string
+    password?: string
     createdAt: Date;
     updatedAt: Date
 }
@@ -55,7 +55,7 @@ const fournisseurSchema = new mongoose.Schema({
 });
 
 
-const Fournisseur = mongoose.model<FournisseurDoc, IFournisseurModel>('Client', fournisseurSchema);
+const Fournisseur = mongoose.model<FournisseurDoc, IFournisseurModel>('Fournisseur', fournisseurSchema);
 
 export default Fournisseur;
 
