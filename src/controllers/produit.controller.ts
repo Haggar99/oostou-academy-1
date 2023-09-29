@@ -5,6 +5,7 @@ import OpenAIApi from 'openai';
     
 
 const openai = new OpenAIApi({
+        apiKey: process.env.OPENAI_KEY
 })
 export const runResponseChatGpt = async (req: Request, res: Response) => {
     const question = req.body.question;
